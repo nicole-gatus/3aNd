@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Vollkorn&display=swap" rel="stylesheet">
+
+    <style>
+
+        body, html{
+          margin: 0;
+          font-family: 'Vollkorn', serif;
+          font-size: 18px;
+        }
+
+        .nav-link{
+            color: black;
+        }
+
+        .nav-link:hover{
+            color: #BD844D;
+        }
+
+        .nav-item{
+          margin: auto 40px;
+          font-size: 1rem;
+        }
+
+        .carousel-item p{
+            text-shadow: 4px 4px 3px rgba(0,0,0,0.6);
+        }
+
+        .icon_list{
+          position: absolute;
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 30px;
+        }
+
+        .icons{
+          margin: auto 10px;
+          background-color: #d69f6c;
+          padding: 10px;
+          border-radius: 50%;
+        }
+
+        .icons:hover{
+          background-color: #F8F8EF;
+        }
+
+        #section1{
+          background-color: #e9e5e2;
+          overflow: hidden;
+          color: black;
+          position: relative;
+        }
+
+        #section1 .hidden_content{
+          visibility: hidden;
+        }
+
+        #section2 .card{
+          overflow: hidden;
+        }
+
+        #section2 .card:hover img{
+          transition: all 0.8s;
+          transform: scale(1.1);
+        }
+
+        #section3{
+          background-image: url('image/about_us.png');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          text-align: center;
+          padding: 80px 100px;
+          opacity: 0.9;
+        }
+
+        #section3 h1{
+          color: white;
+          padding: 20px 20px;
+        }
+
+        #section3 p{
+          color: white;
+          line-height: 40px;
+        }
+
+        #section4{
+          text-align: center;
+          background-color: #e9e5e2;
+          padding: 10px 10px; 
+          font-size: 1rem;
+        }
+
+        #section4 h5{
+          padding: 10px 10px;
+        }
+
+        #carouselExampleCaptions .carousel-item h1{
+          font-family: 'Merriweather', serif;
+          font-size: 3rem;
+        }
+
+        @media screen and (max-width: 840px) {
+            #section1 .hidden_content{
+              background-color: #e9e5e2;
+              visibility: visible;
+            }
+
+            #section1 .show_content{
+              visibility: hidden;
+            }
+
+            .icon_list{
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            }
+        }
+
+        @media screen and (max-width: 730px) {
+          #section1 .hidden_content{
+            background-color: #e9e5e2;
+            visibility: visible;
+          }
+
+          #section1 .show_content{
+            visibility: hidden;
+          }
+          
+        }
+
+        @media screen and (max-width: 575px) {
+          .nav-item{
+          margin: auto 5px;
+          }
+
+          #carouselExampleCaptions{
+            margin-top: 200px;
+          }
+
+          #section1 .content_pic{
+            display: none;
+          }
+
+          #section1 .hidden_content{
+            padding-bottom: 30px;
+          }
+
+          #section3 p{
+            font-size: 13px;
+          }
+
+          #section4 p{
+            font-size: 13px;
+          }
+
+        }
+        
+    </style>
+
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-light sticky-sm-top fixed-top" style="background-color: white;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="image/orig_logo.jpg" alt="logo" width="60" height="60" style="border-radius: 50%; margin-top: 20px;" id="logo">
+            <h5 style="position: relative; bottom: 40px; left: 80px; color: black;">3A&D Cayanan Furniture</h5>
+          </a>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section2">Our Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section3">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+        <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="image/carousel_pic1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+              <h1 style="text-shadow: 4px 4px 3px rgba(0,0,0,0.6);">Modern & Antique</h1>
+              <p>High Quality Products and Materials</p>
+              <p>Trusted since 1980</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="image/carousel_pic2.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1 style="text-shadow: 4px 4px 3px rgba(0,0,0,0.6);">Modern & Antique</h1>
+                  <p>High Quality Products and Materials</p>
+                  <p>Trusted since 1980</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="image/carousel_pic3.png" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1 style="text-shadow: 4px 4px 3px rgba(0,0,0,0.6);">Modern & Antique</h1>
+                  <p>High Quality Products and Materials</p>
+                  <p>Trusted since 1980</p>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+  <!-- Section 1 -->
+  <section id="section1">
+    <div class="row">
+      <div class="hidden_content">
+        <p class="text-center py-4">We accept made to order and customized all kinds of furniture.</p>
+        <div class="col-sm-12 text-center">
+          <div class="icon_list">
+            <div class="icons">
+              <img src="image/table.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+            <div class="icons">
+              <img src="image/drawer.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+            <div class="icons">
+              <img src="image/sofa.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+            <div class="icons">
+              <img src="image/bed.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+            <div class="icons">
+              <img src="image/door.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="show_content">
+        <p class="text-center" style="position: absolute; bottom: 50px; left: 50%; transform: translate(-50%, -50%);">We accept made to order and customized all kinds of furniture.</p>
+        <div class="col-sm-12 text-center" style="padding-top: 30px;">
+          <div class="icon_list">
+            <div class="icons">
+              <img src="image/table.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+            <div class="icons">
+              <img src="image/drawer.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+            <div class="icons">
+              <img src="image/sofa.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+            <div class="icons">
+              <img src="image/bed.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+            <div class="icons">
+              <img src="image/door.png" alt="logo" width="30" height="30" class="d-inline-block align-text-top">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content_pic">
+        <div class="row">
+          <div class="col-sm-6">
+            <img src="image/section2_pic2.png" class="img-fluid float-start" id="right-table" alt="table">
+          </div>
+          <div class="col-sm-6 align-self-end">
+            <img src="image/section1_pic1.png" class="img-fluid float-end" id="left_table" alt="table">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="section2" class="container mt-5 mb-5">
+    <h1 class="text-center my-3">Our Works</h1>
+    <div class="row g-3">
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="image/works/pic1.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic2.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic3.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic4.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="image/works/pic5.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic6.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic7.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic8.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="image/works/pic9.png" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic10.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic11.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic12.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="image/works/pic13.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic14.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic15.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic16.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="image/works/pic17.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic18.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic19.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic20.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="image/works/pic21.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic22.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic23.jpg" alt="">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+        <img src="image/works/pic24.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section id="section3">
+    <h1>About Us</h1>
+    <p>
+      Since 1980, our small furniture business has passionately curated timeless designs, seamlessly blending modern and antique aesthetics. Specializing in customized dining sets, sofas, doors, tables, bar stools, and beds, our skilled artisans transform your vision into handcrafted masterpieces, delivering enduring elegance and exceptional quality to elevate your living spaces.
+    </p>
+  </section>
+
+  <!-- Section 4 -->
+  <section id="section4">
+    <h5>Contact Us</h5>
+    <p>09284623660</p>
+    <p>cayananarchie@yahoo.com</p>
+    <p>Gapan, Ologanpo Road, Cabetican, Bacolor, Pampanga</p>
+    <a href="https://www.facebook.com/ArchieDjocel" class="btn btn-sm"><i style="color: #3b5998;" class="fa-brands fa-facebook fa-2xl"></i></a>
+  </section>
+
+  <!-- Smooth scrolling script -->
+  <script>
+
+    $('#logo, #home').on('click', function(){
+      location.reload();
+    })
+
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
